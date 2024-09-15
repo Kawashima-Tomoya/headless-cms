@@ -6,6 +6,9 @@
 	"organizeImports": {
 		"enabled": true
 	},
+	"formatter": {
+		"enabled": true
+	},
 	"linter": {
 		"enabled": true,
 		"rules": {
@@ -27,7 +30,8 @@
 				"loading.tsx",
 				"not-found.tsx",
 				"page.tsx",
-				"template.tsx"
+				"template.tsx",
+				"tailwind.config.ts"
 			],
 			"linter": {
 				"rules": {

@@ -11,7 +11,6 @@
 	"[typescriptreact]": {
 		"editor.defaultFormatter": "biomejs.biome"
 	},
-	"cSpell.words": ["biomejs", "nextjs", "webp"],
 	"cssVariables.lookupFiles": [
 		"**/*.css",
 		"**/*.scss",
@@ -27,8 +26,12 @@
 	"editor.quickSuggestions": {
 		"strings": true
 	},
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
 	"files.encoding": "utf8",
 	"files.eol": "\n",
 	"typescript.preferences.importModuleSpecifier": "non-relative",
-	"typescript.tsdk": "node_modules/typescript/lib"
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"cSpell.ignoreWords": ["biomejs", "nextjs", "webp", "microcms"]
 }
