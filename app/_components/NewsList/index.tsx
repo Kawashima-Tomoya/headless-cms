@@ -2,6 +2,7 @@ import { CategoryTag } from "@/app/_components/Category";
 import { UpdateDate } from "@/app/_components/UpdateDate";
 import type { News } from "@/app/_libs/microcms";
 import Image from "next/image";
+import Link from "next/link";
 
 type Props = {
 	news: News[];
@@ -18,7 +19,12 @@ export function NewsList({ news }: Props) {
 					key={article.id}
 					className="border-b border-b-[--color-border-light] last:border-b-0"
 				>
-					<div className="flex items-start gap-10 px-0 py-[24px] sm:block sm:px-0 sm:py-[16px]">
+					<Link
+						href={`/news/${article.id}`}
+						className="
+						flex items-start gap-10 px-0 py-[24px]
+						sm:block sm:px-0 sm:py-[16px]"
+					>
 						<Image
 							className="w-[200px] h-auto rounded-[--border-radius] sm:hidden"
 							src="/no-image.png"
@@ -35,7 +41,7 @@ export function NewsList({ news }: Props) {
 								<UpdateDate date={article.publishedAt ?? article.createdAt} />
 							</dd>
 						</dl>
-					</div>
+					</Link>
 				</li>
 			))}
 		</ul>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
 	return (
 		<footer
@@ -12,15 +14,15 @@ export function Footer() {
           sm:flex-wrap sm:gap-y-2 sm:gap-x-0
         "
 				>
-					<li className="sm:w-1/2">
-						<a href="/news">ニュース</a>
-					</li>
-					<li className="sm:w-1/2">
-						<a href="/members">メンバー</a>
-					</li>
-					<li className="sm:w-1/2">
-						<a href="/contact">お問い合わせ</a>
-					</li>
+					<Link href="/news" className="sm:w-1/2">
+						ニュース
+					</Link>
+					<Link href="/members" className="sm:w-1/2">
+						メンバー
+					</Link>
+					<Link href="/contact" className="sm:w-1/2">
+						お問い合わせ
+					</Link>
 				</ul>
 			</nav>
 			<small>&copy; SIMPLE. All Rights Reserved 2024</small>
