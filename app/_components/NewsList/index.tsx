@@ -25,13 +25,23 @@ export function NewsList({ news }: Props) {
 						flex items-start gap-10 px-0 py-[24px]
 						sm:block sm:px-0 sm:py-[16px]"
 					>
-						<Image
-							className="w-[200px] h-auto rounded-[--border-radius] sm:hidden"
-							src="/no-image.png"
-							alt="No image"
-							width={1200}
-							height={630}
-						/>
+						{article.thumbnail ? (
+							<Image
+								className="w-[200px] h-auto rounded-[--border-radius] sm:hidden"
+								src={article.thumbnail.url}
+								alt={article.title}
+								width={article.thumbnail.width}
+								height={article.thumbnail.height}
+							/>
+						) : (
+							<Image
+								className="w-[200px] h-auto rounded-[--border-radius] sm:hidden"
+								src="/no-image.png"
+								alt="No image"
+								width={1200}
+								height={630}
+							/>
+						)}
 						<dl className="">
 							<dt className="text-[1.1rem] font-bold mb-[0.5rem] sm:text-[1rem] sm:mb-[0.4rem]">
 								{article.title}
