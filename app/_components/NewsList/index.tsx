@@ -1,4 +1,4 @@
-import { CategoryTag } from "@/app/_components/Category";
+import { CategoryTag } from "@/app/_components/CategoryTag";
 import { UpdateDate } from "@/app/_components/UpdateDate";
 import type { News } from "@/app/_libs/microcms";
 import Image from "next/image";
