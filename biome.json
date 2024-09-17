@@ -13,6 +13,9 @@
 		"enabled": true,
 		"rules": {
 			"all": true,
+			"security": {
+				"noDangerouslySetInnerHtml": "warn"
+			},
 			"nursery": {
 				"all": true,
 				"noUndeclaredDependencies": "off",

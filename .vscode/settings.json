@@ -33,5 +33,12 @@
 	"files.eol": "\n",
 	"typescript.preferences.importModuleSpecifier": "non-relative",
 	"typescript.tsdk": "node_modules/typescript/lib",
-	"cSpell.ignoreWords": ["biomejs", "microcms", "nextjs", "tailwindcss", "webp"]
+	"cSpell.ignoreWords": [
+		"biomejs",
+		"dompurify",
+		"microcms",
+		"nextjs",
+		"tailwindcss",
+		"webp"
+	]
 }
