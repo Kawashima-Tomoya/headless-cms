@@ -16,8 +16,7 @@ export function Hero({ title, sub }: Props) {
 			<div className=" ">
 				<h1
 					className="
-						text-[2.5rem] font-bold text-center mb-4
-						sm:text-[2rem] sm:text-left"
+						text-[2.5rem] font-bold text-center mb-4 sm:text-[2rem]"
 				>
 					{title}
 				</h1>

@@ -1,0 +1,120 @@
+.content *:first-child {
+  @apply mt-0;
+}
+
+.content > h1 {
+  @apply text-2xl font-bold border-b border-[--color-border] my-7;
+}
+
+.content > h2 {
+  @apply text-xl font-bold my-7;
+}
+
+.content > h3 {
+  @apply text-lg font-bold my-7;
+}
+
+.content > h4 {
+  @apply text-base font-bold my-7;
+}
+
+.content > h5 {
+  @apply text-sm font-bold my-7;
+}
+
+.content > p {
+  @apply my-8 leading-8;
+}
+
+.content > pre {
+  @apply overflow-x-auto;
+}
+
+.content pre > code {
+  @apply bg-[--color-bg-code] block overflow-x-auto p-4;
+}
+
+.content div[data-filename]::before {
+  @apply inline-block bg-[--color-bg-sub] content-[attr(data-filename)] my-4 font-mono text-xs p-4 rounded-t;
+}
+
+.content ul,
+.content ol {
+  @apply my-2 ml-8;
+}
+
+.content > ul,
+.content > ol {
+  @apply my-8;
+}
+
+.content ul > li {
+  @apply list-disc;
+}
+
+.content ol > li {
+  @apply list-decimal;
+}
+
+.content li {
+  @apply my-2;
+}
+
+.content a {
+  @apply underline;
+}
+
+.content > figure > img {
+  @apply max-w-full h-auto my-8;
+}
+
+.content > strong {
+  @apply font-bold;
+}
+
+.content > blockquote {
+  @apply border-l-4 border-[--color-border] pl-4 italic my-8;
+}
+
+.content > hr {
+  @apply my-16 h-px bg-[--color-border] border-none;
+}
+
+.content > table {
+  @apply w-full my-8;
+}
+
+.content > table th {
+  @apply bg-[--color-bg-sub] text-left p-4;
+}
+
+.content > table td {
+  @apply text-left p-4;
+}
+
+@media (max-width: 767px) {
+
+  .content {
+    @apply w-full;
+  }
+
+  .content > h1 {
+    @apply text-xl font-bold border-b border-[--color-border] my-7;
+  }
+
+  .content > h2 {
+    @apply text-lg font-bold my-7;
+  }
+
+  .content > h3 {
+    @apply text-base font-bold my-7;
+  }
+
+  .content > h4 {
+    @apply text-sm font-bold my-7;
+  }
+
+  .content > h5 {
+    @apply text-xs font-bold my-7;
+  }
+}
