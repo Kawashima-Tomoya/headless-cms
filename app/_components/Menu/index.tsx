@@ -20,13 +20,19 @@ export function Menu() {
 			>
 				<ul className="flex text-white gap-10 sm:flex-col sm:gap-6">
 					<li>
-						<Link href="/news">ニュース</Link>
+						<Link href="/news" onClick={close}>
+							ニュース
+						</Link>
 					</li>
 					<li>
-						<Link href="/members">メンバー</Link>
+						<Link href="/members" onClick={close}>
+							メンバー
+						</Link>
 					</li>
 					<li>
-						<Link href="/contact">お問い合わせ</Link>
+						<Link href="/contact" onClick={close}>
+							お問い合わせ
+						</Link>
 					</li>
 				</ul>
 				<button
