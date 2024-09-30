@@ -15,18 +15,20 @@ export default async function Page() {
 						<li
 							key={member.id}
 							className="
-              flex items-start gap-10 mb-20 even:flex-row-reverse"
+              flex items-start gap-10 mb-20 even:flex-row-reverse sm:block"
 						>
 							<Image
-								className="w-[240px] h-auto rounded-[--border-radius)]"
+								className="w-[240px] h-auto rounded-[--border-radius) md:mx-auto md:mt-4"
 								src={member.image.url}
 								alt={member.name}
 								width={member.image.width}
 								height={member.image.height}
 							/>
 							<dl>
-								<dd className="text-[1.2rem] font-bold">{member.name}</dd>
-								<dd className="mb-2">{member.position}</dd>
+								<dd className="text-[1.2rem] font-bold text-center">
+									{member.name}
+								</dd>
+								<dd className="mb-2 text-center">{member.position}</dd>
 								<dd className="text-[0.9rem]">{member.profile}</dd>
 							</dl>
 						</li>
