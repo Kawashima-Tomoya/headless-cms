@@ -32,7 +32,7 @@ export function Pagination({
 							</span>
 						) : (
 							<Link
-								href={`/${basePath}/p/${page}`}
+								href={`${basePath}/p/${page}`}
 								className="flex justify-center items-center w-9 h-9 
                 rounded-[var(--border-radius)] bg-slate-200"
 							>
