@@ -47,7 +47,9 @@ export function NewsList({ news }: Props) {
 								{article.title}
 							</dt>
 							<dd className="flex items-center gap-4">
-								<CategoryTag category={article.category} />
+								<Link href={`/news/category/${article.category.id}`}>
+									<CategoryTag category={article.category} />
+								</Link>
 								<UpdateDate date={article.publishedAt ?? article.createdAt} />
 							</dd>
 						</dl>
