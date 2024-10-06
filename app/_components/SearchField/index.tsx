@@ -48,7 +48,7 @@ function SearchFieldComponent() {
 
 export function SearchField() {
 	return (
-		<Suspense>
+		<Suspense fallback="Loading...">
 			<SearchFieldComponent />
 		</Suspense>
 	);
