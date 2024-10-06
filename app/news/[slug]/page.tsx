@@ -12,8 +12,6 @@ type Props = {
 	};
 };
 
-export const revalidate = 30;
-
 export default async function Page({ params, searchParams }: Props) {
 	const newsDetail = await getNewsDetail(params.slug, {
 		draftKey: searchParams.dk,
