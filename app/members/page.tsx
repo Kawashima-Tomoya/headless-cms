@@ -25,11 +25,13 @@ export default async function Page() {
 								height={member.image.height}
 							/>
 							<dl>
-								<dd className="text-[1.2rem] font-bold text-center">
+								<dd className="text-[1.2rem] font-bold text-left md:text-center md:mt-1">
 									{member.name}
 								</dd>
-								<dd className="mb-2 text-center">{member.position}</dd>
-								<dd className="text-[0.9rem]">{member.profile}</dd>
+								<dd className="mb-2 text-left md:text-center">
+									{member.position}
+								</dd>
+								<dd className="text-[0.9rem] md:mt-1">{member.profile}</dd>
 							</dl>
 						</li>
 					))}
