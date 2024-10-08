@@ -1,6 +1,27 @@
+"use client";
+
+import { createContactData } from "@/app/_actions/contact";
+import { useFormState } from "react-dom";
+
+const initialState = {
+	status: "",
+	message: "",
+};
+
 export function ContactForm() {
+	const [state, formAction] = useFormState(createContactData, initialState);
+	console.log(state);
+	if (state.status === "success") {
+		return (
+			<p className="bg-[var(--color-bg-sub)] text-center p-10 rounded-[var(--border-radius)] md:text-left">
+				お問い合わせいただきありがとうございます。
+				<br />
+				お返事まで今しばらくお待ちください。
+			</p>
+		);
+	}
 	return (
-		<form className="max-w-[600px] mx-auto my-0">
+		<form action={formAction} className="max-w-[600px] mx-auto my-0">
 			<div className="flex justify-start items-center w-full gap-6">
 				<div className="flex flex-col flex-1 py-2 px-0;">
 					<label htmlFor="lastName" className="text-[14px]">
@@ -67,6 +88,11 @@ export function ContactForm() {
 				/>
 			</div>
 			<div className="text-center mt-10">
+				{state.status === "error" && (
+					<p className="text-[var(--color-text-error)] text-[14px] mb-2">
+						{state.message}
+					</p>
+				)}
 				<input
 					type="submit"
 					value="送信する"
@@ -78,16 +104,3 @@ export function ContactForm() {
 		</form>
 	);
 }
-
-// .success {
-//   @apply bg-gray-100 text-center p-10 rounded;
-// }
-// .error {
-//   @apply text-red-500 text-sm mb-2;
-// }
-
-// @media (max-width: 640px) {
-//   .success {
-//     @apply text-left;
-//   }
-// }
