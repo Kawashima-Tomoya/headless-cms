@@ -24,6 +24,13 @@ export default function RootLayout({
 				{children}
 				<Footer />
 			</body>
+			<script
+				type="text/javascript"
+				id="hs-script-loader"
+				async={true}
+				defer={true}
+				src="//js.hs-scripts.com/47643187.js"
+			/>
 		</html>
 	);
 }
