@@ -36,6 +36,8 @@
 	"cSpell.ignoreWords": [
 		"biomejs",
 		"dompurify",
+		"firstname",
+		"lastname",
 		"microcms",
 		"nextjs",
 		"tailwindcss",

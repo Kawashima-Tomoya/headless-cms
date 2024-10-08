@@ -22,27 +22,27 @@ export function ContactForm() {
 	}
 	return (
 		<form action={formAction} className="max-w-[600px] mx-auto my-0">
-			<div className="flex justify-start items-center w-full gap-6">
+			<div className="flex justify-start items-center w-full gap-6 md:block">
 				<div className="flex flex-col flex-1 py-2 px-0;">
-					<label htmlFor="lastName" className="text-[14px]">
+					<label htmlFor="lastname" className="text-[14px]">
 						姓
 					</label>
 					<input
 						type="text"
-						id="lastName"
-						name="lastName"
+						id="lastname"
+						name="lastname"
 						className="
               border border-[var(--color-border)] p-2 rounded leading-[1.5] w-full;"
 					/>
 				</div>
 				<div className="flex flex-col flex-1 py-2 px-0;">
-					<label htmlFor="firstName" className="text-[14px]">
+					<label htmlFor="firstname" className="text-[14px]">
 						名
 					</label>
 					<input
 						type="text"
-						id="firstName"
-						name="firstName"
+						id="firstname"
+						name="firstname"
 						className="
               border border-[var(--color-border)] p-2 
               rounded leading-[1.5] w-full;"

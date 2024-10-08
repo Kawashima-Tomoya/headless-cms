@@ -11,20 +11,20 @@ export async function createContactData(
 ) {
 	// formのname属性ごとにformData.get()で値を取り出す
 	const rawFormData = {
-		lastName: formData.get("lastName") as string,
-		firstName: formData.get("firstName") as string,
+		lastname: formData.get("lastname") as string,
+		firstname: formData.get("firstname") as string,
 		company: formData.get("company") as string,
 		email: formData.get("email") as string,
 		message: formData.get("message") as string,
 	};
 
-	if (!rawFormData.lastName) {
+	if (!rawFormData.lastname) {
 		return {
 			status: "error",
 			message: "姓を入力してください",
 		};
 	}
-	if (!rawFormData.firstName) {
+	if (!rawFormData.firstname) {
 		return {
 			status: "error",
 			message: "名を入力してください",
@@ -66,13 +66,13 @@ export async function createContactData(
 				fields: [
 					{
 						objectTypeId: "0-1",
-						name: "lastName",
-						value: rawFormData.lastName,
+						name: "lastname",
+						value: rawFormData.lastname,
 					},
 					{
 						objectTypeId: "0-1",
-						name: "firstName",
-						value: rawFormData.firstName,
+						name: "firstname",
+						value: rawFormData.firstname,
 					},
 					{
 						objectTypeId: "0-1",
