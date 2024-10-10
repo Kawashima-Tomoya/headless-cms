@@ -55,6 +55,13 @@ export async function createContactData(
 		};
 	}
 
+	if (!process.env.HUBSPOT_PORTAL_ID || !process.env.HUBSPOT_FORM_ID) {
+		return {
+			status: "error",
+			message: "環境変数が設定されていません",
+		};
+	}
+
 	const result = await fetch(
 		`https://api.hsforms.com/submissions/v3/integration/submit/${process.env.HUBSPOT_PORTAL_ID}/${process.env.HUBSPOT_FORM_ID}`,
 		{
@@ -93,6 +100,13 @@ export async function createContactData(
 			}),
 		},
 	);
+
+	if (!result.ok) {
+		return {
+			status: "error",
+			message: "サーバーエラーが発生しました",
+		};
+	}
 
 	try {
 		await result.json();
