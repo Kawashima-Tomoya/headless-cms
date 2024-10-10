@@ -1,4 +1,4 @@
-"use client";
+"use server";
 
 function validateEmail(email: string) {
 	const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
