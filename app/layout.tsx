@@ -5,8 +5,20 @@ import type { Metadata } from "next";
 import type React from "react";
 
 export const metadata: Metadata = {
-	title: "microcms",
+	metadataBase: new URL("https://headless-cms-lac"),
+	title: {
+		template: "%s | シンプルなコーポレートサイト",
+		default: "シンプルなコーポレートサイト",
+	},
 	description: "microcms practice",
+	openGraph: {
+		title: "シンプルなコーポレートサイト",
+		description: "microcms practice",
+		images: ["/ogp.png"],
+	},
+	alternates: {
+		canonical: "https://headless-cms-lac",
+	},
 	viewport: "width=device-width, initial-scale=1.0",
 };
 
