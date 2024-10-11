@@ -1,0 +1,3 @@
+user-agent: *
+Allow: /
+site: https://headless-cms-lac.vercel.app/sitemap/xml

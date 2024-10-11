@@ -6,6 +6,10 @@ type Props = {
 	children: React.ReactNode;
 };
 
+export const metadata = {
+	title: "ニュース",
+};
+
 export default function NewsLayout({ children }: Props) {
 	return (
 		<>
